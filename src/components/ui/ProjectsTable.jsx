@@ -1,13 +1,14 @@
-import Icon from '../ui/Icon';
+import { Link } from 'react-router-dom';
+import Icon from './Icon';
 
 export default function ProjectsTable({ projects }) {
   return (
     <div className="col-span-12 overflow-hidden rounded-xl border border-outline-variant bg-white">
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-outline-variant p-4 md:p-6">
         <h3 className="text-h3">Core Technical Stack Projects</h3>
-        <a href="#projects" className="text-primary hover:underline">
+        <Link to="/projects" className="text-primary hover:underline">
           View All Projects
-        </a>
+        </Link>
       </div>
 
       <div className="overflow-x-auto">
@@ -42,13 +43,13 @@ export default function ProjectsTable({ projects }) {
                   </span>
                 </td>
                 <td className="px-6 py-5">
-                  <a
-                    href={project.url}
+                  <Link
+                    to={project.url}
                     aria-label={`Open ${project.name}`}
                     className="flex h-8 w-8 items-center justify-center rounded border border-outline-variant hover:bg-surface-container-high"
                   >
                     <Icon name="open_in_new" className="!text-[18px]" />
-                  </a>
+                  </Link>
                 </td>
               </tr>
             ))}

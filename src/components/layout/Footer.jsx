@@ -22,13 +22,13 @@ export default function Footer() {
                 key={label}
                 href={href}
                 {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                className="text-on-surface-variant underline transition-all hover:text-primary active:opacity-70"
+                className="text-body-sm text-on-surface-variant underline transition-all hover:text-primary active:opacity-70"
               >
                 {label}
               </a>
             );
           })}
-          <span className="font-bold text-primary">{profile.availability}</span>
+          <span className="text-body-sm font-bold text-primary">{profile.availability}</span>
         </div>
       </div>
     </footer>

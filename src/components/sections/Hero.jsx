@@ -1,5 +1,6 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Icon from '../ui/Icon';
+import {Icon} from '../ui/Icon';
 import { profile } from '../../data/profile';
 import { heroStats } from '../../data/overview';
 
@@ -23,20 +24,20 @@ export default function Hero() {
         <p className="mb-8 max-w-xl text-body-lg text-on-surface-variant">{profile.summary}</p>
 
         <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-          <a
-            href="#projects"
-            className="flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-h3 text-h3 text-on-primary transition-all hover:opacity-90"
-          >
-            View Projects
-            <Icon name="arrow_forward" />
-          </a>
-          <a
-            href="#contact"
-            className="flex items-center justify-center rounded-lg border border-outline px-8 py-3 font-h3 text-h3 text-primary transition-all hover:bg-surface-container-low"
-          >
-            Contact Me
-          </a>
-        </div>
+  <Link
+    to="/projects"
+    className="flex items-center justify-center gap-2 rounded-lg bg-primary px-8 py-3 font-h3 text-h3 text-on-primary transition-all hover:opacity-90"
+  >
+    View Projects
+    <Icon name="arrow_forward" />
+  </Link>
+  <Link
+    to="/contact"
+    className="flex items-center justify-center rounded-lg border border-outline px-8 py-3 font-h3 text-h3 text-primary transition-all hover:bg-surface-container-low"
+  >
+    Contact Me
+  </Link>
+</div>
 
         <ul className="flex flex-wrap gap-2">
           {profile.skillTags.map((skill) => (

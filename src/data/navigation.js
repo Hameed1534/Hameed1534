@@ -1,27 +1,23 @@
 export const topNav = [
-  { label: 'About', id: 'about' },
-  { label: 'Skills', id: 'skills' },
-  { label: 'Projects', id: 'projects' },
-  { label: 'QA Docs', id: 'docs' },
-  { label: 'Contact', id: 'contact' },
+  { label: 'About', to: '/about' },
+  { label: 'Skills', to: '/skills' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'QA Docs', to: '/docs' },
+  { label: 'Contact', to: '/contact' },
 ];
 
 export const sideNav = [
-  { label: 'Dashboard', icon: 'dashboard', id: 'home' },
-  { label: 'Test Suites', icon: 'fact_check', id: 'test-cases' },
-  { label: 'Automation', icon: 'smart_toy', id: 'automation' },
-  { label: 'CI/CD', icon: 'account_tree', id: 'ci-cd' },
-  { label: 'Reports', icon: 'assessment', id: 'bug-reports' },
+  { label: 'Dashboard', icon: 'dashboard', to: '/' },
+  { label: 'Test Suites', icon: 'fact_check', to: '/test-cases' },
+  { label: 'Automation', icon: 'smart_toy', to: '/automation' },
+  { label: 'CI/CD', icon: 'account_tree', to: '/ci-cd' },
+  { label: 'Reports', icon: 'assessment', to: '/bug-reports' },
 ];
 
 export const mobileNav = [
-  { label: 'Home', icon: 'dashboard', id: 'home' },
-  { label: 'Tests', icon: 'fact_check', id: 'test-cases' },
-  { label: 'Auto', icon: 'smart_toy', id: 'automation' },
-  { label: 'Contact', icon: 'person', id: 'contact' },
+  { label: 'Home', icon: 'dashboard', to: '/' },
+  { label: 'About', icon: 'person', to: '/about' },
+  { label: 'Tests', icon: 'fact_check', to: '/test-cases' },
+  { label: 'Auto', icon: 'smart_toy', to: '/automation' },
+  { label: 'Contact', icon: 'mail', to: '/contact' },
 ];
-
-// Stable arrays so the scroll-spy hook does not re-subscribe on every render.
-export const topNavIds = topNav.map((item) => item.id);
-export const sideNavIds = sideNav.map((item) => item.id);
-export const mobileNavIds = mobileNav.map((item) => item.id);

@@ -10,6 +10,6 @@ export const metrics = [
 
 // TODO: use your real stack (for example Selenium, TestNG, Postman, JIRA).
 export const overviewProjects = [
-  { id: 'api-reliability', name: 'API Reliability Framework', stack: ['RestAssured', 'Java'], env: 'Production', status: 'Stable', url: '#projects' },
-  { id: 'ui-automation', name: 'Global UI Automation Suite', stack: ['Playwright', 'TS'], env: 'Staging', status: 'Stable', url: '#projects' },
+  { id: 'api-reliability', name: 'API Reliability Framework', stack: ['RestAssured', 'Java'], env: 'Production', status: 'Stable', url: '/projects', },
+  { id: 'ui-automation', name: 'Global UI Automation Suite', stack: ['Playwright', 'TS'], env: 'Staging', status: 'Stable',url: '/projects', },
 ];
