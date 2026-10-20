@@ -1,5 +1,5 @@
-import MetricCard from 'ui/MetricCard';
-import ProjectsTable from 'ui/ProjectsTable';
+import MetricCard from '../ui/MetricCard';
+import ProjectsTable from '../ui/ProjectsTable';
 import { metrics, overviewProjects } from '../../data/overview';
 
 export default function ExecutionOverview() {

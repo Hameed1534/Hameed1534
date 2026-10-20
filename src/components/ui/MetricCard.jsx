@@ -1,4 +1,4 @@
-import Icon from '.Icon';
+import Icon from '../ui/Icon';
 
 const tones = {
   pass: { badge: 'bg-emerald-100 text-emerald-700', icon: 'check_circle', filled: true },

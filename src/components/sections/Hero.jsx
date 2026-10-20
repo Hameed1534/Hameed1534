@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Icon from '.Icon';
+import Icon from '../ui/Icon';
 import { profile } from '../../data/profile';
 import { heroStats } from '../../data/overview';
 
