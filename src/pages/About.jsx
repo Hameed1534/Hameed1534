@@ -11,7 +11,7 @@ export default function About() {
     <>
       <AboutHero />
       <MethodologiesSection />
-      <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-20">
+      <div className="grid grid-cols-1 gap-16 xl:grid-cols-2 xl:gap-20">
         <CareerTimeline />
         <SkillsProgression />
       </div>

@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../components/layout/Header';
-import MobileNav from '../components/layout/MobileNav';
-import Footer from '../components/layout/Footer';
+import Header from '../layout/Header';
+import MobileNav from '../layout/MobileNav';
+import Footer from '../layout/Footer';
 
 export default function PageLayout() {
   return (

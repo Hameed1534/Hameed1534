@@ -8,9 +8,9 @@ export default function AboutHero() {
   return (
     <section
       aria-labelledby="about-title"
-      className="mb-20 grid grid-cols-1 items-center gap-gutter lg:grid-cols-12"
+      className="mb-20 grid grid-cols-1 items-center gap-gutter xl:grid-cols-12"
     >
-      <div className="lg:col-span-7">
+      <div className="xl:col-span-7">
         <span className="mb-4 block font-label-caps text-label-caps uppercase tracking-widest text-primary">
           {aboutHero.eyebrow}
         </span>
@@ -34,7 +34,7 @@ export default function AboutHero() {
         </ul>
       </div>
 
-      <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
+      <div className="relative mx-auto w-full max-w-md xl:col-span-5 xl:max-w-none">
         <div className="aspect-square overflow-hidden rounded-xl border-4 border-surface-container-highest shadow-xl">
           {imageFailed ? (
             <div className="flex h-full w-full items-center justify-center bg-surface-container-high text-primary">

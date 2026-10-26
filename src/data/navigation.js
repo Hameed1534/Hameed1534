@@ -17,7 +17,7 @@ export const sideNav = [
 export const mobileNav = [
   { label: 'Home', icon: 'dashboard', to: '/' },
   { label: 'About', icon: 'person', to: '/about' },
-  { label: 'Tests', icon: 'fact_check', to: '/test-cases' },
-  { label: 'Auto', icon: 'smart_toy', to: '/automation' },
+  { label: 'Skills', icon: 'build', to: '/skills' },
+  { label: 'Projects', icon: 'work', to: '/projects' },
   { label: 'Contact', icon: 'mail', to: '/contact' },
 ];

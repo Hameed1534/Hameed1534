@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import {Icon} from '../ui/Icon';
+import Icon from '../ui/Icon';
 import { profile } from '../../data/profile';
 import { heroStats } from '../../data/overview';
 
@@ -13,7 +13,7 @@ export default function Hero() {
       className="mb-16 grid grid-cols-12 items-center gap-gutter md:mb-section-gap"
     >
       {/* Left: text */}
-      <div className="col-span-12 lg:col-span-7">
+      <div className="col-span-12 xl:col-span-7">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary-fixed px-3 py-1 font-label-caps text-label-caps uppercase text-on-primary-fixed">
           <Icon name="workspace_premium" filled className="!text-[14px]" />
           {profile.experienceYears} YEARS EXPERIENCE
@@ -52,7 +52,7 @@ export default function Hero() {
       </div>
 
       {/* Right: browser-style image card */}
-      <div className="relative col-span-12 mt-4 lg:col-span-5 lg:mt-0">
+      <div className="relative col-span-12 mt-4 xl:col-span-5 xl:mt-0">
         <div className="overflow-hidden rounded-xl border border-outline-variant bg-white shadow-xl">
           <div className="flex h-8 items-center gap-1.5 border-b border-outline-variant bg-surface-container-high px-4">
             <span className="h-3 w-3 rounded-full bg-error/40" />
@@ -61,7 +61,7 @@ export default function Hero() {
           </div>
 
           {imageFailed ? (
-            <div className="h-64 w-full bg-inverse-surface sm:h-80 lg:h-[400px]" />
+            <div className="h-64 w-full bg-inverse-surface sm:h-80 xl:h-[400px]" />
           ) : (
             <img
               src="/images/hero-dashboard.jpg"

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
-import Header from '../components/layout/Header';
-import Sidebar from '../components/layout/Sidebar';
-import MobileNav from '../components/layout/MobileNav';
-import Footer from '../components/layout/Footer';
+import Header from '../layout/Header';
+import Sidebar from '../layout/Sidebar';
+import MobileNav from '../layout/MobileNav';
+import Footer from '../layout/Footer';
 
 export default function SidebarLayout() {
   return (
