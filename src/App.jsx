@@ -1,10 +1,16 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import ScrollToTop from './components/layout/ScrollToTop';
 import SidebarLayout from './components/layout/SidebarLayout';
 import PageLayout from './components/layout/PageLayout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Docs from './pages/Docs';
+import TestCases from './pages/TestCases';
+import BugReports from './pages/BugReports';
+import Automation from './pages/Automation';
+import SqlTesting from './pages/SqlTesting';
 import ComingSoon from './pages/ComingSoon';
 import NotFound from './pages/NotFound';
 
@@ -18,16 +24,18 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="skills" element={<Skills />} />
-          <Route path="projects" element={<ComingSoon title="Projects" />} />
-          <Route path="docs" element={<ComingSoon title="QA Docs" />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="docs" element={<Docs />} />
+          <Route path="test-cases" element={<TestCases />} />
+          <Route path="bug-reports" element={<BugReports />} />
+          <Route path="automation" element={<Automation />} />
+          <Route path="sql" element={<SqlTesting />} />
+          {/* The CI/CD pipeline lives inside the Automation page */}
+          <Route path="ci-cd" element={<Navigate to="/automation#ci-cd" replace />} />
           <Route path="contact" element={<ComingSoon title="Contact" />} />
-          <Route path="test-cases" element={<ComingSoon title="Test Cases" />} />
-          <Route path="automation" element={<ComingSoon title="Automation" />} />
-          <Route path="ci-cd" element={<ComingSoon title="CI/CD" />} />
-          <Route path="bug-reports" element={<ComingSoon title="Bug Reports" />} />
         </Route>
 
-        {/* Pages without a sidebar (404 only for now) */}
+        {/* Header + footer only */}
         <Route element={<PageLayout />}>
           <Route path="*" element={<NotFound />} />
         </Route>

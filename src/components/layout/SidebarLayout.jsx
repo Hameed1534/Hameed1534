@@ -6,7 +6,7 @@ import Footer from '../layout/Footer';
 
 export default function SidebarLayout() {
   return (
-    <div className="min-h-screen pb-16 md:pb-0">
+    <div className="min-h-screen pb-16 lg:pb-0">
       <Header />
       <Sidebar />
 
