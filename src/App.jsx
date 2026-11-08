@@ -11,7 +11,7 @@ import TestCases from './pages/TestCases';
 import BugReports from './pages/BugReports';
 import Automation from './pages/Automation';
 import SqlTesting from './pages/SqlTesting';
-import ComingSoon from './pages/ComingSoon';
+import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -32,10 +32,10 @@ export default function App() {
           <Route path="sql" element={<SqlTesting />} />
           {/* The CI/CD pipeline lives inside the Automation page */}
           <Route path="ci-cd" element={<Navigate to="/automation#ci-cd" replace />} />
-          <Route path="contact" element={<ComingSoon title="Contact" />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
 
-        {/* Header + footer only */}
+        {/* Header + footer only (no sidebar) */}
         <Route element={<PageLayout />}>
           <Route path="*" element={<NotFound />} />
         </Route>

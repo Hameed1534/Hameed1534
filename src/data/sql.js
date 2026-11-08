@@ -55,5 +55,5 @@ export const sqlBanner = {
   title: 'Precision Testing Architecture',
   description:
     'Ensuring that the bedrock of your application remains immutable and high-performing under any load.',
-  image: '/images/server-room.jpg',
+  image: '/images/server-room.png',
 };

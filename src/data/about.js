@@ -11,9 +11,9 @@ export const aboutHero = {
     { label: 'Fintech', icon: 'payments' },
     { label: 'SaaS', icon: 'cloud_done' },
   ],
-  badgeValue: '3+',
+  badgeValue: '1.5+',
   badgeLabel: 'Years Experience',
-  image: '/images/profile.jpg',
+  image: '/images/Hameed_pic.png',
   imageAlt: 'Portrait of the QA engineer',
 };
 

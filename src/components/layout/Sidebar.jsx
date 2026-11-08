@@ -10,7 +10,7 @@ export default function Sidebar() {
       <div className="mb-8 px-4">
         <div className="mb-2 flex items-center gap-3">
           <Avatar
-            src="/images/avatar.jpg"
+            src="/images/Hameed_pic.png"
             name={profile.name}
             className="h-12 w-12 shrink-0 rounded-full border-2 border-primary"
           />

@@ -14,7 +14,7 @@ export const automationHeader = {
 
 export const pomLayer = {
   eyebrow: 'Logical Layer',
-  title: 'Selenium Framework (POM)',
+  title: 'Playwright Framework (POM)',
   icon: 'architecture',
   pageObjects: ['Login_PO.java', 'Dash_PO.java'],
   runner: {
@@ -85,14 +85,14 @@ export const executionArtefacts = {
       badge: 'REPORTING',
       badgeClassName: 'bg-primary',
       title: 'Extent Report Dashboard',
-      image: '/images/extent-report.jpg',
+      image: '/images/extent-report.png',
       imageAlt: 'Extent Report dashboard with test result charts',
     },
     {
       badge: 'INFRASTRUCTURE',
       badgeClassName: 'bg-tertiary',
       title: 'Dockerized Grid Nodes',
-      image: '/images/docker-grid.jpg',
+      image: '/images/docker-grid.png',
       imageAlt: 'Terminal output from dockerized Selenium Grid nodes',
     },
   ],

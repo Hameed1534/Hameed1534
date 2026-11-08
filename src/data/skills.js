@@ -67,7 +67,7 @@ export const tracking = {
   eyebrow: 'TRACKING',
   title: 'JIRA & Test Management',
   icon: 'bug_report',
-  backgroundImage: '/images/jira-dashboard.jpg', // optional decoration, 10% opacity
+  backgroundImage: '/images/jira-dashboard.png', // optional decoration, 10% opacity
   stats: [
     { value: '150+', label: 'BUGS DOCUMENTED' },
     { value: '45', label: 'EPICS MANAGED' },

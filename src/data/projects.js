@@ -12,7 +12,7 @@ export const flagshipProject = {
   title: 'Global E-Commerce Platform',
   passRate: '99.8% Pass Rate',
   methodology: 'Agile Methodology',
-  image: '/images/project-ecommerce.jpg',
+  image: '/images/project-ecommerce.png',
   imageAlt: 'Mobile devices showing an e-commerce checkout',
   facts: [
     { label: 'DOMAIN', value: 'Retail / FinTech' },
@@ -50,7 +50,7 @@ export const sprintVelocity = {
 
 export const pipelineCard = {
   title: 'CI/CD Pipeline',
-  image: '/images/cicd-pipeline.jpg',
+  image: '/images/cicd-pipeline.png',
   imageAlt: 'Isometric illustration of a CI/CD pipeline',
   badges: ['BUILD: PASS', 'TEST: PASS'],
 };
@@ -94,6 +94,6 @@ export const healthcareProject = {
   challengeLabel: 'CORE CHALLENGE',
   challenge:
     '“Maintaining zero data-loss during complex database migrations involving multi-terabyte legacy patient records.”',
-  image: '/images/healthcare-saas.jpg',
+  image: '/images/healthcare-saas.png',
   imageAlt: 'Tablet showing a patient records dashboard in an operating room',
 };
