@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Icon from '../components/ui/Icon';
 import PageHeader from '../components/ui/PageHeader';
 import BugKpiCards from '../components/sections/bugs/BugKpiCards';
-import DefectTrends from '../components/sections/bugs/DefectTrends';
+import DefectLifecycle from '../components/sections/bugs/DefectLifecycle';
 import SeverityDistribution from '../components/sections/bugs/SeverityDistribution';
 import DefectLogs from '../components/sections/bugs/DefectLogs';
 import { bugsHeader, severityFilters } from '../data/bugs';
@@ -40,7 +40,7 @@ export default function BugReports() {
       <BugKpiCards />
 
       <div className="mb-gutter grid grid-cols-1 gap-gutter xl:grid-cols-12">
-        <DefectTrends />
+        <DefectLifecycle />
         <SeverityDistribution />
       </div>
 

@@ -38,3 +38,10 @@ export const javaRules = [
   { type: 'keyword', regex: /\b(?:public|private|protected|static|final|void|new|class|return|import|package|int|boolean)\b/ },
   { type: 'method', regex: /\btest[A-Za-z0-9_]*(?=\()/ },
 ];
+
+export const jsRules = [
+  { type: 'comment', regex: /\/\/.*/ },
+  { type: 'string', regex: /'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"|`[^`]*`/ },
+  { type: 'keyword', regex: /\b(?:import|from|export|default|const|let|var|await|async|class|constructor|return|new|this|function)\b/ },
+  { type: 'method', regex: /\b(?:test|expect|describe|beforeEach|afterEach)(?=[.(])/ },
+];

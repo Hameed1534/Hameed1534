@@ -103,13 +103,14 @@ export default function BankingProject() {
             <h3 className="text-h3">{compliance.title}</h3>
             <p className="mt-2 text-body-sm text-on-surface-variant">{compliance.description}</p>
           </div>
-          <a
-            href={hasLink ? compliance.url : undefined}
-            aria-disabled={hasLink ? undefined : 'true'}
-            className="block w-full rounded-lg border border-primary py-3 font-semibold text-primary transition-all hover:bg-primary hover:text-white"
-          >
-            {compliance.cta}
-          </a>
+          {hasLink && compliance.cta && (
+            <a
+              href={compliance.url}
+              className="block w-full rounded-lg border border-primary py-3 font-semibold text-primary transition-all hover:bg-primary hover:text-white"
+            >
+              {compliance.cta}
+            </a>
+          )}
         </div>
       </div>
     </section>

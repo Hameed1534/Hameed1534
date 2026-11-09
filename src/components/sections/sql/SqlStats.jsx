@@ -28,8 +28,8 @@ export default function SqlStats() {
       <article className={cardClass}>
         <h3 className={labelClass}>{drift.label}</h3>
         <p className="text-h1 text-on-surface">{drift.value}</p>
-        <p className="mt-4 flex items-center gap-2 text-body-sm text-emerald-600">
-          <Icon name="verified" />
+        <p className={`mt-4 flex items-center gap-2 text-body-sm ${drift.noteClassName ?? 'text-emerald-600'}`}>
+          <Icon name={drift.icon ?? 'verified'} />
           {drift.note}
         </p>
       </article>

@@ -30,13 +30,14 @@ export default function App() {
           <Route path="bug-reports" element={<BugReports />} />
           <Route path="automation" element={<Automation />} />
           <Route path="sql" element={<SqlTesting />} />
-          {/* The CI/CD pipeline lives inside the Automation page */}
-          <Route path="ci-cd" element={<Navigate to="/automation#ci-cd" replace />} />
+          {/* The testing workflow lives inside the Automation page */}
+          <Route path="workflow" element={<Navigate to="/automation#workflow" replace />} />
           <Route path="contact" element={<Contact />} />
         </Route>
 
         {/* Header + footer only (no sidebar) */}
         <Route element={<PageLayout />}>
+          
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

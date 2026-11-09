@@ -1,13 +1,13 @@
-// TODO: placeholder content copied from the Stitch design.
-// The PRD asks for at least 10 real SQL queries (basic, JOIN and validation queries).
-// Replace the query below with one of yours; the editor highlights it automatically.
+// SQL page. Your resume lists SQL (skills) and "MySQL Basics" (Great Learning).
+// Everything here is SAMPLE data to show how data is validated; none of it is real.
+// The PRD asks for at least 10 real SQL queries: replace or extend these with your own.
 
 export const sqlHeader = {
   eyebrow: 'Data Integrity Layer',
   title: 'SQL & Database Testing',
   description:
-    'Validation of persistence layers through automated query execution, schema verification, and state transition testing.',
-  dbContext: { label: 'DB CONTEXT', value: 'PostgreSQL-Cluster-01' },
+    'SQL checks used to validate the data behind the UI and APIs: joins, filters and validation queries. All tables and rows on this page are sample data.',
+  dbContext: { label: 'DB CONTEXT', value: 'Sample MySQL schema' },
 };
 
 export const sqlEditor = {
@@ -16,22 +16,22 @@ export const sqlEditor = {
 FROM users u
 INNER JOIN payments p ON u.id = p.user_id
 WHERE p.status = 'COMPLETED'
-AND p.created_at >= NOW() - INTERVAL '24 hours'
+AND p.created_at >= NOW() - INTERVAL 24 HOUR
 ORDER BY p.amount DESC
 LIMIT 100;`,
-  status: 'Connected',
-  executionTime: 'Execution time: 42ms',
-  rowCount: 'Rows: 128',
+  status: 'Sample query',
+  executionTime: 'Run against sample data',
+  rowCount: 'Rows: 4',
 };
 
 export const tableVerification = {
   title: 'Table Verification',
   tables: [
-    { name: 'users', meta: '24 columns • 1.2M rows' },
-    { name: 'payments', meta: '12 columns • 850k rows' },
-    { name: 'audit_logs', meta: '8 columns • 12M rows' },
+    { name: 'users', meta: 'id, username, email' },
+    { name: 'payments', meta: 'transaction_id, user_id, amount, status' },
+    { name: 'audit_logs', meta: 'event, user_id, created_at' },
   ],
-  cta: 'Analyze Constraints',
+  cta: '',
 };
 
 export const queryResult = {
@@ -45,15 +45,32 @@ export const queryResult = {
   ],
 };
 
+// Calculated from the rows above, so the cards always match the table.
+const sampleRows = queryResult.rows;
+const matches = sampleRows.filter((row) => row.validation === 'Match').length;
+const matchRate = sampleRows.length ? Math.round((matches / sampleRows.length) * 1000) / 10 : 0;
+const concepts = ['INNER JOIN', 'WHERE', 'ORDER BY', 'LIMIT'];
+
 export const sqlStats = {
-  consistency: { label: 'CONSISTENCY RATE', value: '99.2%', percent: 99.2, note: '12,400 keys validated' },
-  drift: { label: 'SCHEMA DRIFT', value: 'None', note: 'Synchronized with Production' },
-  suites: { label: 'ACTIVE TEST SUITES', value: '14', tags: ['ETL', 'MIGRATION', 'CRUD'] },
+  consistency: {
+    label: 'MATCH RATE',
+    value: `${matchRate}%`,
+    percent: matchRate,
+    note: `${matches} of ${sampleRows.length} sample rows match`,
+  },
+  drift: {
+    label: 'SAMPLE ROWS',
+    value: String(sampleRows.length),
+    note: 'Returned by the query above',
+    icon: 'table_rows',
+    noteClassName: 'text-on-surface-variant',
+  },
+  suites: { label: 'SQL CONCEPTS', value: String(concepts.length), tags: concepts },
 };
 
 export const sqlBanner = {
-  title: 'Precision Testing Architecture',
+  title: 'Accurate Data Behind Every Screen',
   description:
-    'Ensuring that the bedrock of your application remains immutable and high-performing under any load.',
-  image: '/images/server-room.png',
+    'What the UI and the APIs show should match what is stored. SQL validation closes that gap.',
+  image: '/images/server-room.jpg',
 };

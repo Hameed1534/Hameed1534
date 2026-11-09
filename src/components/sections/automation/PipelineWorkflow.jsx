@@ -14,7 +14,7 @@ const tones = {
 export default function PipelineWorkflow() {
   return (
     <section
-      id="ci-cd"
+      id="workflow"
       aria-labelledby="pipeline-title"
       className="relative overflow-hidden rounded-xl bg-inverse-surface p-6 text-inverse-on-surface md:p-8 xl:col-span-12"
     >

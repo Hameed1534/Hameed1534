@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../ui/Icon';
-import { profile } from '../../data/profile';
+import { profile, experience } from '../../data/profile';
 import { heroStats } from '../../data/overview';
 
 export default function Hero() {
@@ -16,10 +16,18 @@ export default function Hero() {
       <div className="col-span-12 xl:col-span-7">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary-fixed px-3 py-1 font-label-caps text-label-caps uppercase text-on-primary-fixed">
           <Icon name="workspace_premium" filled className="!text-[14px]" />
-          {profile.experienceYears} YEARS EXPERIENCE
+          {experience.text}
         </div>
 
         <h1 className="mb-4 text-h1 text-on-background md:text-display">{profile.role}</h1>
+
+        <p className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-body-md font-semibold text-on-surface">
+          <span>{profile.name}</span>
+          <span className="flex items-center gap-1 font-normal text-on-surface-variant">
+            <Icon name="location_on" className="!text-[18px]" />
+            {profile.location}
+          </span>
+        </p>
 
         <p className="mb-8 max-w-xl text-body-lg text-on-surface-variant">{profile.summary}</p>
 
@@ -64,7 +72,7 @@ export default function Hero() {
             <div className="h-64 w-full bg-inverse-surface sm:h-80 xl:h-[400px]" />
           ) : (
             <img
-              src="/images/hero-dashboard.png"
+              src="/images/hero-dashboard.jpg"
               alt="Laptop showing a QA automation dashboard with passing tests"
               fetchPriority="high"
               onError={() => setImageFailed(true)}
@@ -75,18 +83,11 @@ export default function Hero() {
 
         {/* Floating pass-rate card */}
         <div className="absolute bottom-4 left-4 rounded-xl border border-outline-variant bg-white p-4 shadow-lg md:-bottom-6 md:-left-6 md:p-6">
-          <div className="mb-3 flex items-center justify-between gap-8 md:mb-4 md:gap-12">
-            <span className="font-label-caps text-label-caps text-on-surface-variant">
-              TEST PASS RATE
-            </span>
-            <span className="font-bold text-primary">{heroStats.passRate}%</span>
-          </div>
-          <div className="h-2 w-40 overflow-hidden rounded-full bg-surface-container md:w-48">
-            <div
-              className="h-full bg-gradient-to-r from-primary to-primary-container"
-              style={{ width: `${heroStats.passRate}%` }}
-            />
-          </div>
+          <span className="font-label-caps text-label-caps text-on-surface-variant">
+            {heroStats.label}
+          </span>
+          <div className="mt-1 text-3xl font-bold text-primary">{heroStats.value}</div>
+          <p className="max-w-[12rem] text-body-sm text-on-surface-variant">{heroStats.note}</p>
         </div>
       </div>
     </section>

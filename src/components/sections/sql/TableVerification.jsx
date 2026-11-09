@@ -30,13 +30,15 @@ export default function TableVerification() {
         ))}
       </ul>
 
-      <button
-        type="button"
-        title="Demo control"
-        className="mt-6 w-full rounded border border-primary py-2 font-label-caps text-label-caps uppercase text-primary transition-colors hover:bg-primary/5"
-      >
-        {data.cta}
-      </button>
+      {data.cta && (
+        <button
+          type="button"
+          title="Demo control"
+          className="mt-6 w-full rounded border border-primary py-2 font-label-caps text-label-caps uppercase text-primary transition-colors hover:bg-primary/5"
+        >
+          {data.cta}
+        </button>
+      )}
     </section>
   );
 }

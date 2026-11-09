@@ -2,8 +2,8 @@ import Icon from '../../ui/Icon';
 import { maturity } from '../../../data/skills';
 
 const statusStyles = {
-  Pass: { badge: 'bg-emerald-100 text-emerald-800', icon: 'check_circle' },
-  Pending: { badge: 'bg-amber-100 text-amber-800', icon: 'schedule' },
+  Active: { badge: 'bg-emerald-100 text-emerald-800', icon: 'check_circle' },
+  Learning: { badge: 'bg-amber-100 text-amber-800', icon: 'schedule' },
 };
 
 const headings = ['Skill Name', 'Experience', 'Last Used', 'Proficiency', 'Status'];
@@ -36,7 +36,7 @@ export default function SkillMaturityMatrix() {
             </thead>
             <tbody className="divide-y divide-outline-variant">
               {maturity.rows.map((row) => {
-                const status = statusStyles[row.status] ?? statusStyles.Pending;
+                const status = statusStyles[row.status] ?? statusStyles.Learning;
                 return (
                   <tr key={row.skill} className="transition-colors hover:bg-surface-container-low">
                     <td className="px-6 py-4 text-body-md font-bold">{row.skill}</td>

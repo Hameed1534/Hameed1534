@@ -1,82 +1,78 @@
-// TODO: every value below is placeholder content copied from the Stitch design.
-// Replace it with your real, verifiable information before publishing.
+// About page content. Facts come from the resume.
+import { experience } from './profile';
 
 export const aboutHero = {
   eyebrow: 'Professional Profile',
-  heading: 'Methodical Precision in Software Quality Assurance',
-  summary:
-    'A dedicated QA Engineer with 3 years of hands-on experience driving quality excellence across high-stakes industries. Specializing in end-to-end automation and API reliability, I transform complex testing requirements into scalable, resilient frameworks.',
+  heading: 'Detail-Driven Quality Assurance for Healthcare & SaaS Applications',
+  summary: `Junior Software Tester with ${experience.sentence} of hands-on experience in functional, regression, API and performance testing on live healthcare and SaaS web applications. I work in Agile/Scrum teams, validate REST and GraphQL APIs with Postman, load-test with JMeter, manage defects in JIRA, and I am building Playwright (JavaScript) automation.`,
   domains: [
-    { label: 'E-Commerce', icon: 'shopping_cart' },
-    { label: 'Fintech', icon: 'payments' },
+    { label: 'Healthcare', icon: 'medical_services' },
     { label: 'SaaS', icon: 'cloud_done' },
+    { label: 'Corporate Web', icon: 'language' },
   ],
-  badgeValue: '1.5+',
-  badgeLabel: 'Years Experience',
-  image: '/images/Hameed_pic.png',
-  imageAlt: 'Portrait of the QA engineer',
+  badgeValue: experience.badgeValue,
+  badgeLabel: experience.badgeLabel,
+  image: '/images/profile.jpg', // TODO: add your own square photo
+  imageAlt: 'Portrait of Hameed Khan Z',
 };
 
 export const sdlc = {
   title: 'SDLC & STLC Integration',
   description:
-    'Deep integration of testing phases within the Software Development Life Cycle. From Requirement Analysis to Test Closure, ensuring that quality is not an afterthought but a continuous thread.',
-  // Add more phases here (e.g. Defect Lifecycle, Regression & Smoke/Sanity); the grid adapts.
+    'Testing is built into every sprint: reviewing requirements and acceptance criteria, designing test cases, executing functional, regression, smoke and sanity suites, and tracking each defect to closure.',
   phases: [
     { label: 'Phase 01', title: 'Requirement Analysis' },
     { label: 'Phase 02', title: 'Test Design & Execution' },
+    { label: 'Phase 03', title: 'Defect Lifecycle in JIRA' },
+    { label: 'Phase 04', title: 'Regression, Smoke & Sanity' },
   ],
 };
 
 export const agile = {
-  title: 'Agile Champion',
+  title: 'Agile / Scrum Practitioner',
   description:
-    'Active participant in Scrum ceremonies. Proficient in Jira for sprint planning, bug tracking, and grooming sessions to maintain a healthy velocity.',
-  footerLabel: 'Continuous Feedback',
+    'Works in sprint cycles with developers and business stakeholders: reviews requirements, aligns test coverage with acceptance criteria and supports timely, compliant releases.',
+  footerLabel: 'Sprint-Aligned Testing',
 };
 
 export const specialization = {
   title: 'API & Automation',
   items: [
-    'RESTful API testing with Postman/RestAssured',
-    'Scalable E2E frameworks with Cypress & Playwright',
-    'CI/CD integration via GitHub Actions',
+    'REST and GraphQL API testing with Postman',
+    'Performance testing with JMeter',
+    'Playwright (JavaScript) automation with Page Object Model, in progress',
   ],
 };
 
 export const credential = {
   eyebrow: 'Credentials',
-  title: 'ISTQB® Certified Tester',
-  description: 'Foundation Level (CTFL) - Validation of core testing principles.',
+  title: 'Certified in Testing, API & Performance',
+  description:
+    'Udemy: Software Testing with Jira & Agile, JMeter Performance Testing, REST & GraphQL API Testing with Postman. Great Learning: MySQL Basics.',
 };
 
-export const experience = [
+export const experienceTimeline = [
   {
-    period: '2022 - PRESENT',
-    role: 'Senior QA Automation Engineer',
-    company: 'FinTech Innovators',
+    period: 'JULY 2024 - PRESENT',
+    role: 'Junior Software Tester',
+    company: 'Wonder Worth Solutions Pvt Ltd, Vellore',
     description:
-      'Spearheaded the migration from manual regression to 85% automated coverage for a global payments gateway. Implemented performance testing using JMeter.',
+      'Testing live healthcare and SaaS web applications in an Agile/Scrum team: 200+ test cases executed, 55+ API endpoints validated and 60+ defects managed in JIRA. Currently building Playwright (JavaScript) automation to expand regression coverage.',
   },
   {
-    period: '2021 - 2022',
-    role: 'Software QA Analyst',
-    company: 'MarketScale E-Commerce',
-    description:
-      'Focused on cross-browser compatibility and user journey validation for high-traffic retail platforms. Reduced critical production bugs by 40% through early bug detection.',
-  },
-  {
-    period: '2020 - 2021',
-    role: 'Junior QA / Intern',
-    company: 'SaaS StartUp Lab',
-    description:
-      'Foundational experience in manual test execution, bug reporting via Jira, and learning the basics of Selenium WebDriver.',
+    period: 'MAY 2024',
+    role: 'B.Tech, Information Technology',
+    company: 'Veltech Multitech Dr. Rangarajan Dr. Sakunthala Engineering College, Avadi',
+    description: 'Graduated with a CGPA of 7.53.',
   },
 ];
 
+// The bars show the level named in your resume, not a measured score:
+// Proficient = 80, Working knowledge = 60, Building = 50, Learning = 25.
 export const skillGroups = [
-  { name: 'Automation Frameworks', level: 'Advanced', percent: 90, tools: ['Cypress', 'Playwright', 'Selenium'] },
-  { name: 'API Testing', level: 'Advanced', percent: 85, tools: ['Postman', 'RestAssured', 'GraphQL'] },
-  { name: 'Cloud & DevOps', level: 'Intermediate', percent: 65, tools: ['GitHub Actions', 'Jenkins', 'Docker'] },
-  { name: 'Performance & Security', level: 'Growing', percent: 45, tools: ['JMeter', 'OWASP ZAP', 'Lighthouse'] },
+  { name: 'Functional & Regression Testing', level: 'Proficient', percent: 80, tools: ['Smoke', 'Sanity', 'Compatibility', 'UAT'] },
+  { name: 'API Testing', level: 'Proficient', percent: 80, tools: ['Postman', 'REST', 'GraphQL'] },
+  { name: 'Performance Testing', level: 'Proficient', percent: 80, tools: ['JMeter'] },
+  { name: 'Test Automation', level: 'Building', percent: 50, tools: ['Playwright', 'JavaScript', 'POM'] },
+  { name: 'Cloud & Data', level: 'Learning', percent: 25, tools: ['Azure Data Factory', 'Resource Groups'] },
 ];

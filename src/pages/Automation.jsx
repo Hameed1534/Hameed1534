@@ -3,8 +3,6 @@ import Icon from '../components/ui/Icon';
 import PomDiagram from '../components/sections/automation/PomDiagram';
 import MavenStructure from '../components/sections/automation/MavenStructure';
 import PipelineWorkflow from '../components/sections/automation/PipelineWorkflow';
-import AutomationMetrics from '../components/sections/automation/AutomationMetrics';
-import ExecutionArtefacts from '../components/sections/automation/ExecutionArtefacts';
 import { automationHeader } from '../data/automation';
 import usePageTitle from '../hooks/usePageTitle';
 
@@ -33,14 +31,11 @@ export default function Automation() {
         </ul>
       </PageHeader>
 
-      <div className="mb-16 grid grid-cols-1 gap-gutter md:mb-section-gap xl:grid-cols-12">
+      <div className="grid grid-cols-1 gap-gutter xl:grid-cols-12">
         <PomDiagram />
         <MavenStructure />
         <PipelineWorkflow />
-        <AutomationMetrics />
       </div>
-
-      <ExecutionArtefacts />
     </div>
   );
 }

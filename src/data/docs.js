@@ -1,77 +1,58 @@
-// TODO: placeholder content copied from the Stitch design.
-// Replace repo names, descriptions, star/fork counts and links with your real GitHub work.
-// An empty `url` renders the link as inactive; fill it in when the target exists
-// (a GitHub URL, or a file placed in the `public/` folder such as '/docs/master-test-plan.pdf').
+// QA Docs page.
+// TODO: add your real GitHub repositories to `featuredRepos.items` (the PRD makes a GitHub
+// link mandatory) and links to your documents in `documentation.items[].url`.
+// Cards without a link simply show no button.
+// Do not publish company documents or any patient data.
 
 export const docsHeader = {
   eyebrow: 'REPOSITORIES & ARTIFACTS',
-  title: 'QA Infrastructure & Documentation',
+  title: 'QA Documentation & Code Samples',
   description:
-    'Comprehensive view of automation frameworks, CI/CD pipelines, and strategic quality documentation generated during the software development lifecycle.',
+    'Test documentation and automation code samples that show how I plan, design and execute testing.',
 };
 
+// Example of an item:
+// {
+//   category: 'AUTOMATION',
+//   badge: { label: 'IN PROGRESS', icon: 'build', className: 'bg-blue-100 text-blue-700' },
+//   title: 'playwright-pom-practice',
+//   description: 'Playwright (JavaScript) tests using the Page Object Model.',
+//   tags: ['JavaScript', 'Playwright', 'POM'],
+//   stars: 0,
+//   forks: 0,
+//   url: 'https://github.com/your-username/playwright-pom-practice',
+// }
 export const featuredRepos = {
   title: 'Featured Repositories',
   icon: 'terminal',
-  items: [
-    {
-      category: 'FRAMEWORK',
-      badge: { label: 'STABLE', icon: 'check_circle', className: 'bg-emerald-100 text-emerald-700' },
-      title: 'Selenium-TestNG-Java',
-      description:
-        'Hybrid Data-Driven framework for Enterprise E-commerce platform testing. Includes Page Object Model, ExtentReports, and Apache POI for Excel integration.',
-      tags: ['Java', 'Selenium 4', 'TestNG'],
-      stars: 24,
-      forks: 12,
-      url: '',
-    },
-    {
-      category: 'API TESTING',
-      badge: { label: 'ACTIVE', icon: 'check_circle', className: 'bg-emerald-100 text-emerald-700' },
-      title: 'Rest-Assured-Automation',
-      description:
-        'Robust API validation suite for microservices. Implements JSON Schema validation, authentication handling (OAuth2), and CI/CD integration via GitHub Actions.',
-      tags: ['RestAssured', 'Jackson', 'Maven'],
-      stars: 18,
-      forks: 5,
-      url: '',
-    },
-    {
-      category: 'MOBILE',
-      badge: { label: 'MAINTAINED', icon: 'build', className: 'bg-blue-100 text-blue-700' },
-      title: 'Appium-Mobile-Suite',
-      description:
-        'Cross-platform mobile automation using Appium and Python for iOS and Android native applications. Focuses on gesture testing and offline mode behavior.',
-      tags: ['Appium', 'Python', 'Pytest'],
-      stars: 31,
-      forks: 8,
-      url: '',
-    },
-  ],
+  emptyMessage: 'My GitHub repositories will appear here.',
+  items: [],
 };
 
 export const logicPreview = {
-  title: 'Logic Preview: Test Class Implementation',
+  title: 'Logic Preview: Playwright Test with Page Object Model',
   icon: 'code',
-  fileName: 'PurchaseWorkflowTest.java',
-  code: `@Test(priority = 1, description = "Validate successful checkout flow")
-public void testCheckoutWorkflow() {
-    // Initialize Page Objects
-    HomePage home = new HomePage(driver);
-    CartPage cart = new CartPage(driver);
+  fileName: 'login.spec.js',
+  // An example of the pattern. TODO: replace with a script from your own project.
+  code: `import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/LoginPage';
 
-    // Execute Test Steps
-    home.searchProduct("MacBook Pro")
-        .addToCart()
-        .proceedToCheckout();
+test.describe('Login', () => {
+  test.beforeEach(async ({ page }) => {
+    await page.goto('/login');
+  });
 
-    // Assert Outcomes
-    Assert.assertTrue(cart.isCartHeaderVisible(), "Cart header missing");
-    Assert.assertEquals(cart.getItemCount(), 1, "Incorrect item count in cart");
+  test('shows an error for an invalid password', async ({ page }) => {
+    const loginPage = new LoginPage(page);
 
-    // Log results for ExtentReports
-    Logger.info("Checkout flow validated successfully");
-}`,
+    // Act: use the page object, not raw locators
+    await loginPage.login('qa.user@example.com', 'wrong-password');
+
+    // Assert: the error message is shown
+    await expect(loginPage.errorMessage).toBeVisible();
+    await expect(loginPage.errorMessage).toContainText('Invalid');
+  });
+});`,
 };
 
 export const documentation = {
@@ -80,33 +61,33 @@ export const documentation = {
   items: [
     {
       icon: 'picture_as_pdf',
-      title: 'Master Test Plan',
-      description: 'Strategic scope, environment details, and risk assessment.',
+      title: 'Test Plan',
+      description: 'Scope, approach, environments and risks for a sprint release.',
       cta: 'Preview PDF',
       ctaIcon: 'visibility',
       url: '',
     },
     {
       icon: 'table_chart',
-      title: 'Traceability Matrix',
-      description: 'Requirement-to-TestCase mapping for 100% coverage.',
+      title: 'Test Cases',
+      description: 'Positive, negative and boundary scenarios with expected results.',
       cta: 'Open Sheet',
       ctaIcon: 'open_in_new',
       url: '',
     },
     {
       icon: 'bug_report',
-      title: 'Defect Analysis',
-      description: 'Regression RCA and high-severity bug report samples.',
+      title: 'Defect Reports',
+      description: 'Written like JIRA tickets: steps, severity, priority and environment.',
       cta: 'Read Report',
       ctaIcon: 'history_edu',
       url: '',
     },
     {
       icon: 'rule',
-      title: 'API Spec Docs',
-      description: 'Postman collections and Swagger validation criteria.',
-      cta: 'View Schema',
+      title: 'Postman Collection',
+      description: 'REST and GraphQL requests with status-code and response checks.',
+      cta: 'View Collection',
       ctaIcon: 'schema',
       url: '',
     },

@@ -22,17 +22,16 @@ export default function DocumentationGrid() {
               </div>
               <h3 className="mb-1 text-base font-semibold text-on-surface">{doc.title}</h3>
               <p className="mb-4 text-body-sm text-on-surface-variant">{doc.description}</p>
-              <a
-                href={hasLink ? doc.url : undefined}
-                aria-disabled={hasLink ? undefined : 'true'}
-                {...(hasLink && doc.url.startsWith('http')
-                  ? { target: '_blank', rel: 'noopener noreferrer' }
-                  : {})}
-                className="flex items-center gap-1 text-body-sm font-bold text-primary transition-transform group-hover:translate-x-1"
-              >
-                {doc.cta}
-                <Icon name={doc.ctaIcon} className="!text-sm" />
-              </a>
+              {hasLink && (
+                <a
+                  href={doc.url}
+                  {...(doc.url.startsWith('http') ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className="flex items-center gap-1 text-body-sm font-bold text-primary transition-transform group-hover:translate-x-1"
+                >
+                  {doc.cta}
+                  <Icon name={doc.ctaIcon} className="!text-sm" />
+                </a>
+              )}
             </article>
           );
         })}

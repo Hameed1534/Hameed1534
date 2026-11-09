@@ -4,7 +4,7 @@ export const contactContent = {
   eyebrow: 'GET IN TOUCH',
   title: "Let's build reliable software together.",
   intro:
-    "Whether you're looking to scale your automation framework or need a rigorous manual testing audit, I'm here to ensure your technical maturity stays at its peak.",
+    "Looking for a software tester for functional, API or performance testing on web applications? I'd be glad to talk about how I can help your team release with confidence.",
   fields: {
     name: { label: 'FULL NAME', placeholder: 'John Doe' },
     email: { label: 'EMAIL ADDRESS', placeholder: 'john@company.com' },
@@ -15,9 +15,9 @@ export const contactContent = {
     },
   },
   submitLabel: 'Send Secure Message',
-  status: { label: 'CURRENT STATUS', value: 'Open for Opportunities' },
+  status: { label: 'CURRENT STATUS', value: 'Open for Opportunities' }, // TODO: keep only if true
   precision: {
     title: 'Methodical Precision',
-    text: "My approach integrates automated testing directly into the DevOps pipeline, ensuring that every deployment is vetted against rigorous regression suites. I don't just find bugs; I prevent them through architectural oversight and process maturity.",
+    text: "I test live healthcare and SaaS applications in Agile/Scrum teams, validating workflows, APIs and performance before every release. I'm now growing into Playwright automation to widen regression coverage and reduce manual effort.",
   },
 };

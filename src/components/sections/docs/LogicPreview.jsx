@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import IconHeading from '../../ui/IconHeading';
-import { tokenize, javaRules } from '../../../utils/highlight';
+import { tokenize, jsRules } from '../../../utils/highlight';
 import { logicPreview as preview } from '../../../data/docs';
 
 const tokenClasses = {
@@ -60,7 +60,7 @@ export default function LogicPreview() {
             <code>
               {lines.map((line, index) => (
                 <div key={index}>
-                  {tokenize(line, javaRules).map((token, tokenIndex) => (
+                  {tokenize(line, jsRules).map((token, tokenIndex) => (
                     <span key={tokenIndex} className={token.type ? tokenClasses[token.type] : undefined}>
                       {token.text}
                     </span>

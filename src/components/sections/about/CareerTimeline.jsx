@@ -1,5 +1,5 @@
 import SectionHeading from '../../ui/SectionHeading';
-import { experience } from '../../../data/about';
+import { experienceTimeline as experience } from '../../../data/about';
 
 export default function CareerTimeline() {
   return (

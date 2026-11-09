@@ -10,6 +10,12 @@ export default function FeaturedRepos() {
         {featuredRepos.title}
       </IconHeading>
 
+      {featuredRepos.items.length === 0 && (
+        <p className="rounded-xl border border-dashed border-outline-variant bg-surface-container-low p-8 text-center text-body-md text-on-surface-variant">
+          {featuredRepos.emptyMessage}
+        </p>
+      )}
+
       <div className="grid grid-cols-1 gap-gutter md:grid-cols-2 xl:grid-cols-3">
         {featuredRepos.items.map((repo) => {
           const hasLink = Boolean(repo.url);

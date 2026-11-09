@@ -44,7 +44,7 @@ export default function PomDiagram() {
           <Icon name="arrow_forward" className="scale-150 text-outline-variant" />
         </div>
 
-        {/* TestNG runner */}
+        {/* Test runner */}
         <div className="w-full rounded-lg bg-primary-container p-6 text-on-primary-container shadow-md md:w-2/5">
           <h3 className="mb-4 border-b border-white/20 pb-2 text-center font-label-caps text-label-caps uppercase opacity-80">
             {pom.runner.title}

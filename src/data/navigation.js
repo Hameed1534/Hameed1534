@@ -13,7 +13,7 @@ export const sideNav = [
   { label: 'Dashboard', icon: 'dashboard', to: '/' },
   { label: 'Test Suites', icon: 'fact_check', to: '/test-cases' },
   { label: 'Automation', icon: 'smart_toy', to: '/automation' },
-  { label: 'CI/CD', icon: 'account_tree', to: '/ci-cd' },
+  { label: 'Test Workflow', icon: 'account_tree', to: '/workflow' },
   { label: 'Reports', icon: 'assessment', to: '/bug-reports' },
   { label: 'SQL Testing', icon: 'database', to: '/sql' },
 ];
@@ -44,7 +44,7 @@ export const menuGroups = [
       { label: 'Dashboard', icon: 'dashboard', to: '/' },
       { label: 'Test Suites', icon: 'fact_check', to: '/test-cases' },
       { label: 'Automation', icon: 'smart_toy', to: '/automation' },
-      { label: 'CI/CD', icon: 'account_tree', to: '/ci-cd' },
+      { label: 'Test Workflow', icon: 'account_tree', to: '/workflow' },
       { label: 'Bug Reports', icon: 'assessment', to: '/bug-reports' },
       { label: 'SQL Testing', icon: 'database', to: '/sql' },
     ],
