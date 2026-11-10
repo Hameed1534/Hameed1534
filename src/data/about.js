@@ -12,7 +12,7 @@ export const aboutHero = {
   ],
   badgeValue: experience.badgeValue,
   badgeLabel: experience.badgeLabel,
-  image: '/images/profile.jpg', // TODO: add your own square photo
+  image: '/images/Hameed_pic.png', // TODO: add your own square photo
   imageAlt: 'Portrait of Hameed Khan Z',
 };
 

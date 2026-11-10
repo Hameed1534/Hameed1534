@@ -72,7 +72,7 @@ export default function Hero() {
             <div className="h-64 w-full bg-inverse-surface sm:h-80 xl:h-[400px]" />
           ) : (
             <img
-              src="/images/hero-dashboard.jpg"
+              src="/images/hero-dashboard.png"
               alt="Laptop showing a QA automation dashboard with passing tests"
               fetchPriority="high"
               onError={() => setImageFailed(true)}
