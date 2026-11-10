@@ -12,7 +12,7 @@ export const flagshipProject = {
   title: 'BM – US Medical Billing Application',
   passRate: 'Zero critical defects post-release',
   methodology: 'Agile / Scrum',
-  image: '',
+  image: '/images/healthcare-saas.png',
   imageAlt: 'US medical billing application',
   facts: [
     { label: 'DOMAIN', value: 'Healthcare / RCM' },

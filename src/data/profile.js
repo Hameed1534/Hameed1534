@@ -25,7 +25,7 @@ export const experience = {
 
 export const profile = {
   brand: 'HAMEED_KHAN',
-  sidebarTitle: 'QA Portfolio',
+  sidebarTitle: 'Hameed Khan Z',
   sidebarSubtitle: 'Junior Software Tester',
 
   name: 'Hameed Khan Z',
