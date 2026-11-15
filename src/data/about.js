@@ -57,13 +57,19 @@ export const experienceTimeline = [
     role: 'Junior Software Tester',
     company: 'Wonder Worth Solutions Pvt Ltd, Vellore',
     description:
-      'Testing live healthcare and SaaS web applications in an Agile/Scrum team: 200+ test cases executed, 55+ API endpoints validated and 60+ defects managed in JIRA. Currently building Playwright (JavaScript) automation to expand regression coverage.',
+      'Testing live healthcare and SaaS web applications in an Agile/Scrum team: 500+ test cases executed, 155+ API endpoints validated and 120+ defects managed in JIRA. Currently building Playwright (JavaScript) automation to expand regression coverage.',
   },
   {
     period: 'MAY 2024',
     role: 'B.Tech, Information Technology',
     company: 'Veltech Multitech Dr. Rangarajan Dr. Sakunthala Engineering College, Avadi',
     description: 'Graduated with a CGPA of 7.53.',
+  },
+  {
+    period: 'MAY 2020',
+    role: 'XII,Computer Science',
+    company: 'Saraswathi Vidyalaya metric Hr Sec School,Kaveripakkam',
+    description: 'Completed Higher secondary with a percentage of 69.5.',
   },
 ];
 

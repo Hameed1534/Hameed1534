@@ -3,7 +3,7 @@
 
 // Experience is calculated from your start date, so it never goes out of date.
 // Edit START_DATE if it changes. (Months are counted from 0: July = 6.)
-const START_DATE = new Date(2024, 6, 14); // 14 July 2024
+const START_DATE = new Date(2024, 7, 14); // 14 July 2024
 
 function monthsSince(start, now = new Date()) {
   let months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
@@ -24,7 +24,7 @@ export const experience = {
 };
 
 export const profile = {
-  brand: 'HAMEED_KHAN',
+  brand: 'QA Portfolio',
   sidebarTitle: 'Hameed Khan Z',
   sidebarSubtitle: 'Junior Software Tester',
 
@@ -43,8 +43,8 @@ export const profile = {
 
   email: 'Hameedkhan032002@gmail.com',
   phone: '+91 87547 71534',
-  linkedin: '#', // TODO: https://www.linkedin.com/in/your-handle
-  github: '#', // TODO: https://github.com/your-username
+  linkedin: 'https://www.linkedin.com/in/hameed-khan-z-659655273', // TODO: https://www.linkedin.com/in/your-handle
+  github: 'https://github.com/Hameed1534', // TODO: https://github.com/your-username
 
   footerText: 'Software Tester Portfolio',
   availability: 'Availability: Open', // TODO: change if you are not looking right now

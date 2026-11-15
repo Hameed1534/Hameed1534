@@ -19,6 +19,7 @@ export default function FeaturedRepos() {
       <div className="grid grid-cols-1 gap-gutter md:grid-cols-2 xl:grid-cols-3">
         {featuredRepos.items.map((repo) => {
           const hasLink = Boolean(repo.url);
+          const showCounts = repo.stars != null || repo.forks != null;
           return (
             <article
               key={repo.title}
@@ -36,7 +37,7 @@ export default function FeaturedRepos() {
                 </Pill>
               </div>
 
-              <h3 className="mb-2 text-h3 text-on-surface">{repo.title}</h3>
+              <h3 className="mb-2 break-words text-h3 text-on-surface">{repo.title}</h3>
               <p className="mb-6 text-body-sm text-on-surface-variant">{repo.description}</p>
 
               <ul className="mb-6 flex flex-wrap gap-2">
@@ -51,23 +52,25 @@ export default function FeaturedRepos() {
               </ul>
 
               <div className="mt-auto flex items-center justify-between gap-2 border-t border-outline-variant pt-4">
-                <div className="flex gap-4 text-body-sm text-outline">
-                  <span className="flex items-center gap-1" title="Stars">
-                    <Icon name="star" className="!text-sm" />
-                    {repo.stars}
-                  </span>
-                  <span className="flex items-center gap-1" title="Forks">
-                    <Icon name="fork_left" className="!text-sm" />
-                    {repo.forks}
-                  </span>
-                </div>
+                {showCounts && (
+                  <div className="flex gap-4 text-body-sm text-outline">
+                    <span className="flex items-center gap-1" title="Stars">
+                      <Icon name="star" className="!text-sm" />
+                      {repo.stars ?? 0}
+                    </span>
+                    <span className="flex items-center gap-1" title="Forks">
+                      <Icon name="fork_left" className="!text-sm" />
+                      {repo.forks ?? 0}
+                    </span>
+                  </div>
+                )}
                 <a
                   href={hasLink ? repo.url : undefined}
                   aria-disabled={hasLink ? undefined : 'true'}
                   {...(hasLink && repo.url.startsWith('http')
                     ? { target: '_blank', rel: 'noopener noreferrer' }
                     : {})}
-                  className="flex items-center gap-1 font-semibold text-primary hover:underline"
+                  className="ml-auto flex items-center gap-1 font-semibold text-primary hover:underline"
                 >
                   View Code
                   <Icon name="arrow_outward" className="!text-[18px]" />

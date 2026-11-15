@@ -34,9 +34,9 @@ export const testingVolume = {
   title: 'Testing Volume',
   icon: 'bug_report',
   rows: [
-    { label: 'Test cases executed', value: '200+' },
-    { label: 'API endpoints validated', value: '55+' },
-    { label: 'Defects managed in JIRA', value: '60+' },
+    { label: 'Test cases executed', value: '500+' },
+    { label: 'API endpoints validated', value: '155+' },
+    { label: 'Defects managed in JIRA', value: '120+' },
   ],
   note: 'Across 3 live production web applications.',
 };

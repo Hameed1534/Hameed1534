@@ -2,7 +2,7 @@
 
 export const heroStats = {
   label: 'TEST CASES EXECUTED',
-  value: '200+',
+  value: '500+',
   note: 'Across 3 live production web applications',
 };
 
@@ -10,7 +10,7 @@ export const metrics = [
   {
     id: 'cases',
     label: 'TEST CASES EXECUTED',
-    value: '200+',
+    value: '500+',
     caption: 'Functional, regression, smoke, sanity and compatibility',
     tag: 'Manual',
     tone: 'pass',
@@ -18,7 +18,7 @@ export const metrics = [
   {
     id: 'api',
     label: 'API ENDPOINTS VALIDATED',
-    value: '55+',
+    value: '155+',
     caption: 'REST and GraphQL, tested in Postman before each release',
     tag: 'API',
     tone: 'optimal',
@@ -26,7 +26,7 @@ export const metrics = [
   {
     id: 'defects',
     label: 'DEFECTS MANAGED',
-    value: '60+',
+    value: '120+',
     caption: 'Logged and tracked in JIRA through the full defect lifecycle',
     tag: 'JIRA',
     tone: 'optimal',
