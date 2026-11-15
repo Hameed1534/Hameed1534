@@ -2,19 +2,19 @@
 
 export const contactContent = {
   eyebrow: 'GET IN TOUCH',
-  title: "Let's build reliable software together.",
+  title: "Let's build better software through quality testing.",
   intro:
-    "Looking for a software tester for functional, API or performance testing on web applications? I'd be glad to talk about how I can help your team release with confidence.",
+    "Looking for  software tester for functional, API or performance testing on web applications? I'd be glad to talk about how I can help your team release with confidence.",
   fields: {
     name: { label: 'FULL NAME', placeholder: 'John Doe' },
-    email: { label: 'EMAIL ADDRESS', placeholder: 'john@company.com' },
-    subject: { label: 'SUBJECT', placeholder: 'QA Infrastructure Inquiry' },
+    email: { label: 'EMAIL ADDRESS', placeholder: 'Your email address' },
+    subject: { label: 'SUBJECT', placeholder: 'Job Opportunity / Professional Inquiry' },
     message: {
       label: 'MESSAGE',
-      placeholder: 'Describe your project goals and quality requirements...',
+      placeholder: `Have a Software Testing opportunity or a project you'd like to discuss? Feel free to reach out. I'd be happy to connect and explore how my experience and skills can contribute to your team.`,
     },
   },
-  submitLabel: 'Send Secure Message',
+  submitLabel: 'Send Message',
   status: { label: 'CURRENT STATUS', value: 'Open for Opportunities' }, // TODO: keep only if true
   precision: {
     title: 'Methodical Precision',

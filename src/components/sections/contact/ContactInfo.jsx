@@ -93,7 +93,7 @@ export default function ContactInfo() {
             className="flex w-full items-center justify-center gap-2 rounded-lg bg-on-background py-4 text-body-md font-semibold text-white transition-opacity hover:opacity-90"
           >
             <Icon name="download" />
-            Download Full Resume
+            Download My Resume
           </a>
         </div>
       </div>

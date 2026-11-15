@@ -76,9 +76,9 @@ export const tracking = {
   icon: 'bug_report',
   backgroundImage: '/images/jira-dashboard.jpg', // optional decoration, 10% opacity
   stats: [
-    { value: '60+', label: 'DEFECTS MANAGED' },
-    { value: '200+', label: 'TEST CASES EXECUTED' },
-    { value: '55+', label: 'API ENDPOINTS VALIDATED' },
+    { value: '120+', label: 'DEFECTS MANAGED' },
+    { value: '500+', label: 'TEST CASES EXECUTED' },
+    { value: '155+', label: 'API ENDPOINTS VALIDATED' },
     { value: '3', label: 'LIVE APPLICATIONS TESTED' },
   ],
 };
@@ -87,10 +87,10 @@ export const maturity = {
   title: 'Skill Maturity Matrix',
   description: 'Where each skill stands today. Proficiency dots are my own assessment.',
   rows: [
-    { skill: 'Functional & Regression Testing', experience: 'Since Jul 2024', lastUsed: 'Current', proficiency: 4, status: 'Active' },
-    { skill: 'API Testing (Postman)', experience: 'Since Jul 2024', lastUsed: 'Current', proficiency: 4, status: 'Active' },
-    { skill: 'JIRA & Defect Lifecycle', experience: 'Since Jul 2024', lastUsed: 'Current', proficiency: 4, status: 'Active' },
-    { skill: 'Performance Testing (JMeter)', experience: 'Since Jul 2024', lastUsed: 'Current', proficiency: 3, status: 'Active' },
+    { skill: 'Functional & Regression Testing', experience: 'Since Jul 2025', lastUsed: 'Current', proficiency: 4, status: 'Active' },
+    { skill: 'API Testing (Postman)', experience: 'Since Jul 2025', lastUsed: 'Current', proficiency: 4, status: 'Active' },
+    { skill: 'JIRA & Defect Lifecycle', experience: 'Since Jul 2025', lastUsed: 'Current', proficiency: 4, status: 'Active' },
+    { skill: 'Performance Testing (JMeter)', experience: 'Since Jul 2025', lastUsed: 'Current', proficiency: 3, status: 'Active' },
     { skill: 'Playwright Automation', experience: 'Building', lastUsed: 'Current', proficiency: 2, status: 'Learning' },
   ],
 };

@@ -26,7 +26,38 @@ export const featuredRepos = {
   title: 'Featured Repositories',
   icon: 'terminal',
   emptyMessage: 'My GitHub repositories will appear here.',
-  items: [],
+  items: [
+    {
+      category: 'WEBSITE',
+      badge: { label: 'PUBLIC', icon: 'public', className: 'bg-blue-100 text-blue-700' },
+      title: 'Hameed1534',
+      description:
+        'React, Vite and Tailwind CSS project: the source code behind this portfolio website.',
+      tags: ['React', 'Vite', 'Tailwind CSS'],
+      // stars and forks are left out on purpose: the card hides the counts when they are missing
+      url: 'https://github.com/Hameed1534/Hameed1534',
+    },
+    {
+      category: 'WEBSITE',
+      badge: { label: 'PUBLIC', icon: 'public', className: 'bg-blue-100 text-blue-700' },
+      title: 'Playwright',
+      description:
+        ' Playwright with Javascript project: the source code behind this portfolio website.',
+      tags: ['Automation','Playwright','JavaScript'],
+      // stars and forks are left out on purpose: the card hides the counts when they are missing
+      url: 'https://github.com/Hameed1534/playwright',
+    },
+    {
+      category: 'WEBSITE',
+      badge: { label: 'PUBLIC', icon: 'public', className: 'bg-blue-100 text-blue-700' },
+      title: 'HameedCodes',
+      description:
+        'Html , Css, Javascript project: the source code behind this portfolio website.',
+      tags: ['HTML', 'Css', 'JavaScript'],
+      // stars and forks are left out on purpose: the card hides the counts when they are missing
+      url: 'https://github.com/Hameed1534/hameedCodes',
+    },
+  ],
 };
 
 export const logicPreview = {
