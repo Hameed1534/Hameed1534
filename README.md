@@ -1,3 +1,16 @@
+# Hi, I'm Hameed Khan Z
+
+Junior Software Tester working on live healthcare and SaaS web applications in Agile/Scrum teams.
+
+## What I do
+- Functional, regression, smoke, sanity and compatibility testing
+- REST and GraphQL API testing with Postman
+- Performance testing with JMeter
+- Defect tracking in JIRA
+- Building Playwright (JavaScript) automation with the Page Object Model
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
