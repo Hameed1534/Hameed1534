@@ -38,7 +38,7 @@ export const profile = {
 
   skillTags: ['Manual Testing', 'API Testing', 'Postman', 'JMeter', 'JIRA', 'Playwright', 'Agile / Scrum', 'SQL'],
 
-  resumeUrl: 'public/HAMEED KHAN_Z.pdf', // put your PDF at public/resume.pdf
+  resumeUrl: 'Hameed_Khan_Z_Resume.pdf', // put your PDF at public/resume.pdf
   resumeFileName: 'Hameed_Khan_Z_Resume.pdf',
 
   email: 'Hameedkhan032002@gmail.com',
